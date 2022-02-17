@@ -29,7 +29,6 @@ def api():
 	users = []
 
 	if data['add'] == 'no':
-
 		
 
 		if os.path.exists(directory):
@@ -56,7 +55,6 @@ def api():
 						usersNames.append(row[2])
 						usersPaths.append(row[0])
 					
-					file.close()
 				
 				for item in users[1:]:
 
@@ -87,13 +85,13 @@ def api():
 				resp = f"New User: {data['userName']}  Added"
 
 
-				with open('users.csv', mode='a') as user:
-					user_writer = csv.writer(user, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+				with open('users.csv', mode='a') as user_file:
+					user_writer = csv.writer(user_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
 
 					user_writer.writerow([path, './stranger', data['userName']])
 
-					user.close()
-				print(users)	
+					user_file.close()
+					
 			except:
 				pass
 

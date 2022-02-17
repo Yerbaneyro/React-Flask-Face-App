@@ -39,7 +39,7 @@ return (
     videoConstraints = {videoConstraints}
     />
     
-    <h2>{name}</h2>
+    <h2>Hello, {name}</h2>
     <button className='authorisation' onClick={capture}>Authorisation</button>
 </div>
     );
