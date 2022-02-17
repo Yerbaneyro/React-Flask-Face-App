@@ -36,7 +36,7 @@ class FaceRec:
                 for (top, right, bottom, left), face_encoding in zip(face_locations, face_encodings):
                 
                     matches = face_recognition.compare_faces(known_face_encodings, face_encoding)
-                    name = "Nobody"
+                    name = "Face issue"
                     
                     face_distances = face_recognition.face_distance(known_face_encodings, face_encoding)
                     best_match_index = np.argmin(face_distances)
@@ -49,6 +49,5 @@ class FaceRec:
                     return name
 
 
-marcin = FaceRec('./known_people/Marcin.jpeg', './stranger', 'Marcin')
-wiola = FaceRec('./known_people/Wiola.jpeg', './stranger', 'Wiola')
+
 
