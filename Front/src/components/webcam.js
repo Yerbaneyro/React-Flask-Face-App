@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import axios from 'axios';
 import Webcam from 'react-webcam';
-import './webcam.css';
 
 const WebcamCapture = () => {
 const webcamRef = React.useRef(null);
@@ -39,7 +38,7 @@ return (
     videoConstraints = {videoConstraints}
     />
     
-    <h2>Hello, {name}</h2>
+    <h2>{name}</h2>
     <button className='authorisation' onClick={capture}>Authorisation</button>
 </div>
     );

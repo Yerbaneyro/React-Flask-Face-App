@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import Webcam from 'react-webcam';
+import { FiUserPlus } from 'react-icons/fi'
 
 const AddUser = () => {
 const webcamRef = React.useRef(null);
@@ -10,7 +11,7 @@ const videoConstraints = {
     facingMode: 'user'
 };
 const[name, setName] = useState('')
-const [userName, setUserName] = useState('You did not provide a name...');
+const [userName, setUserName] = useState('');
 
 useEffect(() => console.log(userName), [userName]);
 
@@ -48,17 +49,18 @@ const capture = React.useCallback(
             />
             <h2>{name}</h2>
             <br />
-            <p>Write yor name and smile It will be added with your name to data base and you will be able to authorise youself on the homepage.</p>
+            <p>Write yor name and smile It will be added with your name to data base and you will be able to authorise youself on the previous page.</p>
             <form>
                 <label>Enter your name:
-                    <input
+                    <input 
+                    className='input'
                     type="text" 
                     value={userName}
                     onChange={NameInput}
                     />
                 </label>
             </form>
-            <button onClick={capture}>Add me!</button>
+            <button className='authorisation' onClick={capture}><FiUserPlus className='icon'/>Add me!</button>
         </div>
     );
 
