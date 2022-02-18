@@ -2,7 +2,7 @@
 
 You can see [DEMO here](https://awesome-saha-454f9c.netlify.app/)
 
-Important: Back End is operation on Heroku server so its not allowing to create new file for long time. Don't worry about your data it will not be stored anywhere. Anyway...sometimes it could make some issues with recogniting new users because they are quickly deleted. On Demo version use...any Harry Potter picture (for example on you phone) or my picture from CV. There is also Linus or Luke SkyWalker options. Just open that on your phone, show it to camera and press Authorisation button.
+Important: Back End is operating on Heroku server so its not allowing to create new file for long time. Don't worry about your data it will not be stored anywhere. Anyway...sometimes it could make some issues with recogniting new users because they are quickly deleted. On Demo version use...any Harry Potter picture (for example on you phone) or my picture from CV. There is also Linus or Luke SkyWalker options. Just open that on your phone, show it to camera and press Authorisation button.
 
 If you clone repository and open it localy all new users work good so you can put your face to the system.
 
