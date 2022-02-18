@@ -29,3 +29,22 @@ pip3 install flask
 pip3 install gunicorn
 pip3 install Flask-Cors
 ```
+And finaly to start flask app by:
+
+```
+flask run
+```
+
+##### Front End
+
+To start Front End I used Yarn but you can use npm or some other package manager:
+```
+yarn install
+yarn start
+```
+or
+
+```
+npm install
+npm start
+```
