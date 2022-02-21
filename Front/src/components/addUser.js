@@ -1,9 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import Webcam from 'react-webcam';
-import { FiUserPlus } from 'react-icons/fi'
+import { FiUserPlus } from 'react-icons/fi';
+import { AiOutlineRollback } from 'react-icons/ai';
+import { RiUser6Line } from 'react-icons/ri';
 
-const AddUser = () => {
+const AddUser = ({setCurrentPage}) => {
 const webcamRef = React.useRef(null);
 const videoConstraints = {
     width : 200,
@@ -25,7 +27,7 @@ const capture = React.useCallback(
     console.log(`imageSrc = ${imageSrc}`)
     console.log(userName)
                 //for deployment, you should put your backend url / api
-    axios.post('http://127.0.0.1:5000/api', {data : imageSrc, add : 'yes', userName : userName})
+    axios.post('https://reactfaceapp.azurewebsites.net/api', {data : imageSrc, add : 'yes', userName : userName})
         .then(res => {
         console.log(`response = ${res.data}`)
         setName(res.data)
@@ -38,18 +40,18 @@ const capture = React.useCallback(
 );
 
     return (
+
         <div>
+            <RiUser6Line className="template"/>
             <Webcam
             audio = {false}
-            height = {300}
+            height = {400}
             ref = {webcamRef}
             screenshotFormat = "image/jpeg"
-            width = {350}
+            width = {500}
             videoConstraints = {videoConstraints}
             />
-            <h2>{name}</h2>
-            <br />
-            <p>Write yor name and smile It will be added with your name to data base and you will be able to authorise youself on the previous page.</p>
+            <h2 className='status'>{name}</h2>
             <form>
                 <label>Enter your name:
                     <input 
@@ -60,7 +62,10 @@ const capture = React.useCallback(
                     />
                 </label>
             </form>
-            <button className='authorisation' onClick={capture}><FiUserPlus className='icon'/>Add me!</button>
+            <div className='add-buttons'>
+                <button className='add-new-user' onClick={capture}><FiUserPlus className='icon'/>Add me!</button>
+                <button className='back' onClick={() => setCurrentPage('Home')}> <AiOutlineRollback className='icon'/> Back</button>
+            </div>
         </div>
     );
 

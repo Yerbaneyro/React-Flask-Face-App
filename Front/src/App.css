@@ -1,24 +1,52 @@
 body {
   text-align: center;
   color: #f8f8f8;
-  background-image: url(./img/bacground.jpg);
-  background-size: cover;
-  background-clip: content-box;
-  background-position: center;
-  background-attachment: fixed;
+  background-color: white;
   background-repeat: no-repeat;
 }
 
+body a {
+  text-decoration: none;
+}
+
+.main-containers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.side-panel {
+  background-color: #3155b9;
+  width: 300px;
+  min-width: 300px;
+  height: 120vh;
+}
+
+.side-panel p {
+  font-size: 12px;
+  width: 200px;
+  text-align: justify;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.side-panel ul {
+  text-align: left;
+  font-size: 12px;
+}
+
+.alert {
+  color: #f8e218;
+}
+
 .container {
-  background-color: rgba(39, 36, 36, 0.616);
-  width: 370px;
   height: 650px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  border-radius: 24px;
+  width: 350px;
+  margin-left: 150px;
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .head {
@@ -26,31 +54,71 @@ body {
 }
 
 button {
-  margin: 30px;
-  background-color: rgba(49, 50, 58, 0.37);
+  background-color: #3155b9;
+  border: 2px solid white;
   color: white;
-  font-size: 15px;
+  font-size: 13px;
   width: 150px;
-  border-radius: 24px;
+  border-radius: 5px;
   padding: 5px 10px;
   -webkit-transition: 0.1s ease-in-out 0s;
   transition: 0.1s ease-in-out 0s;
+  cursor: pointer;
 }
 
-button:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+.navigation-bar {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.navigation-bar button {
+  background-color: #4478a3;
+  border: 1px solid #374ba7;
+  display: block;
+  margin-top: 5px;
+  width: 300px;
+  text-align: left;
+}
+
+.navigation-bar button:hover {
+  background-color: #7c0c64;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: 13px;
 }
 
 .authorisation {
-  position: fixed;
-  right: 160px;
-  color: #00ff0d;
-  background-color: rgba(0, 128, 0, 0.356);
+  color: white;
+  border: 1px solid #374ba7;
+  background-color: #3155b9;
+  font-size: 30px;
+  width: 300px;
+}
+
+.authorisation:hover {
+  background-color: #263da1;
+}
+
+.add-new-user {
+  color: white;
+  border: 1px solid #374ba7;
+  background-color: #3155b9;
+  font-size: 30px;
+  width: 300px;
+  position: relative;
+  top: 50px;
+  left: 40px;
+}
+
+.add-new-user:hover {
+  background-color: #263da1;
 }
 
 .addUser {
-  position: fixed;
   right: -5px;
 }
 
@@ -58,6 +126,10 @@ button:hover {
   margin-right: 2px;
   position: relative;
   top: 2px;
+}
+
+form {
+  color: black;
 }
 
 .input {
@@ -68,5 +140,101 @@ button:hover {
   position: relative;
   top: 100px;
   margin: 0 10px;
+}
+
+.Demo {
+  width: 300px;
+  margin-top: 200px;
+  margin-left: 30px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.349);
+  border-radius: 24px;
+}
+
+.header-capction {
+  font-size: 18px;
+}
+
+.status-container {
+  height: 100px;
+}
+
+.status {
+  color: black;
+  font-size: 35px;
+}
+
+.authorisation-icon {
+  position: relative;
+  top: 5px;
+}
+
+.loading-icon {
+  position: relative;
+  bottom: 48px;
+  left: 130px;
+}
+
+.add-buttons {
+  display: block;
+}
+
+.back {
+  position: relative;
+  bottom: 490px;
+  left: 70px;
+  width: 80px;
+  border: 1px solid #374ba7;
+}
+
+.back:hover {
+  background-color: #263da1;
+}
+
+.template {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  color: rgba(101, 107, 143, 0.37);
+  top: 225px;
+  left: 570px;
+}
+
+.read-me {
+  color: #3155b9;
+}
+
+.read-me p {
+  font-size: 13px;
+}
+
+.technology-icon {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+}
+
+@-webkit-keyframes loading {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 20deg;
+  }
+}
+
+@keyframes loading {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 20deg;
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .Demo {
+    display: none;
+  }
 }
 /*# sourceMappingURL=App.css.map */

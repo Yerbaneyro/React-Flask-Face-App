@@ -1,25 +1,51 @@
+$theme: rgb(49, 85, 185);
 
 body {
     text-align: center;
     color: rgb(248, 248, 248);
-    background-image: url(./img/bacground.jpg);
-    background-size: cover;
-    background-clip: content-box;
-    background-position: center;
-    background-attachment: fixed;
+    background-color: white;
     background-repeat: no-repeat;
+
+    a {
+        text-decoration: none;
+    }
 
 }
 
+.main-containers {
+    display: flex;
+}
+
+.side-panel {
+    background-color: $theme;
+    width: 300px;
+    min-width: 300px;
+    height: 120vh;
+
+    p {
+        font-size: 12px;
+        width: 200px;
+        text-align: justify;
+        margin-left: 30px;
+        margin-top: 30px;
+    }
+
+    ul {
+        text-align: left;
+        font-size: 12px;
+    }
+}
+
+.alert {
+    color: rgb(248, 226, 24);
+}
+
 .container {
-    background-color: rgba(39, 36, 36, 0.616);
-    width: 370px;
     height: 650px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 24px;
+    width: 350px;
+    margin-left: 150px;
+    margin-top: 100px;
+    display: flex;
     
 }
 
@@ -28,29 +54,68 @@ body {
 }
 
 button {
-    margin: 30px;
-    background-color: rgba(49, 50, 58, 0.37);
+    background-color: $theme;
+    border: 2px solid white;
     color: rgb(255, 255, 255);
-    font-size: 15px;
+    font-size: 13px;
     width: 150px;
-    border-radius: 24px;
+    border-radius: 5px;
     padding: 5px 10px;
     transition: 0.1s ease-in-out 0s;
+    cursor: pointer;
 }
 
-button:hover {
-    transform: scale(1.05);
+.navigation-bar {
+    margin-top: 30px;
+    margin-left: 30px;
+
+    button {
+        background-color: rgb(68, 120, 163);
+        border: 1px solid rgb(55, 75, 167);
+        display: block;
+        margin-top: 5px;
+        width: 300px;
+        text-align: left;
+    }
+    button:hover {
+        background-color: rgb(124, 12, 100);
+    }
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 13px;
 }
 
 .authorisation {
-    position: fixed;
-    right: 160px;
-    color: rgb(0, 255, 13);
-    background-color: rgba(0, 128, 0, 0.356);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(55, 75, 167);
+    background-color: $theme;
+    font-size: 30px;
+    width: 300px;
+}
+.authorisation:hover {
+    background-color:rgb(38, 61, 161);
+}
+
+.add-new-user {
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(55, 75, 167);
+    background-color: $theme;
+    font-size: 30px;
+    width: 300px;
+    position: relative;
+    top: 50px;
+    left: 40px;
+}
+
+.add-new-user:hover {
+    background-color:rgb(38, 61, 161);
 }
 
 .addUser {
-    position: fixed;
     right: -5px;
 }
 
@@ -58,6 +123,10 @@ button:hover {
     margin-right: 2px;
     position: relative;
     top: 2px;
+}
+
+form {
+    color: black;
 }
 
 .input {
@@ -68,4 +137,88 @@ button:hover {
     position: relative;
     top: 100px;
     margin: 0 10px;
+}
+
+.Demo {
+    width: 300px;
+    margin-top: 200px;
+    margin-left: 30px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.349);
+    border-radius: 24px;
+}
+
+.header-capction {
+    font-size: 18px;
+}
+
+.status-container {
+    height: 100px;
+}
+
+.status {
+    color: black;
+    font-size: 35px;
+}
+
+.authorisation-icon {
+    position: relative;
+    top: 5px;
+}
+
+.loading-icon {
+    position: relative;
+    bottom: 48px;
+    left: 130px;
+}
+
+.add-buttons {
+    display: block;
+}
+
+.back {
+    position: relative;
+    bottom: 490px;
+    left: 70px;
+    width: 80px;
+    border: 1px solid rgb(55, 75, 167);
+}
+
+.back:hover {
+    background-color: rgb(38, 61, 161);
+}
+
+.template {
+    width: 300px;
+    height: 300px;
+    position:absolute;
+    color: rgba(101, 107, 143, 0.37);
+    top: 225px;
+    left: 570px;
+
+}
+
+.read-me {
+    color: $theme;
+
+    p {
+        font-size: 13px;
+    }
+}
+
+.technology-icon {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+}
+@keyframes loading {
+    from {rotate: 0deg;}
+    to {rotate: 20deg;}
+}
+
+@media only screen and (max-width: 1080px) {
+    .Demo {
+        display: none;
+    }
+    
 }

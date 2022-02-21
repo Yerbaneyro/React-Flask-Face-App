@@ -1,4 +1,5 @@
 from difflib import Match
+from distutils.log import debug
 from flask import Flask, request
 from flask_cors import CORS
 import json
@@ -103,4 +104,4 @@ def api():
 
 
 if __name__ == '__main__':
-	app.run()
+	app.run(debug=True)
